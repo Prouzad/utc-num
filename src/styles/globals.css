@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+.ant-upload-select {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  height: 100%;
+}
+
+.ant-upload-list-item-done:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+
+}

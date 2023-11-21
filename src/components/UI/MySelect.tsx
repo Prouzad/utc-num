@@ -1,13 +1,9 @@
 import { Select } from "antd";
 
-const MySelect = ({
-  option,
-}: {
-  option: { value: string; label: string }[];
-}) => {
+const MySelect = ({ option }: { option: IOption[] }) => {
   return (
     <Select
-      defaultValue={option[0].label}
+      defaultValue={option[0]}
       style={{ height: 42, borderRadius: 4, margin: 0, width: "100%" }}
       dropdownStyle={{
         borderRadius: 4,

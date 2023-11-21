@@ -6,21 +6,21 @@ import SecondTitle from "../SecondTitle";
 
 const UserInfoSection = () => {
   return (
-    <>
+    <div className="md:mt-10 mt-5">
       <SecondTitle>
         Shaxsni tasdiqlovchi xujjat ma’lumotlarini kiriting
       </SecondTitle>
-      <div className="flex justify-between">
-        <div className="w-1/2 max-w-[467px]">
+      <div className="flex justify-between md:gap-10 gap-5 sm:flex-row flex-col">
+        <div className="w-full">
           <MyInput placeholder="Familiya" title="Familiya" />
           <MyInput placeholder="Ism" title="Ism" />
           <MyInput placeholder="Sharif" title="Sharif" />
-          <div className="flex w-full items-end">
-            <div className="mr-5">
+          <div className="w-full grid grid-cols-2 gap-5 mt-5">
+            <div>
               <MyTitle title="Tug’ilgan kun" />
               <MyDataPricker />
             </div>
-            <div className="w-full">
+            <div>
               <MyTitle title="Jins" />
               <MySelect
                 option={[
@@ -31,18 +31,20 @@ const UserInfoSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 max-w-[467px]">
-          <div className="flex">
-            <div className="max-w-[187px]">
+        <div className="w-full">
+          <div className="flex items-center flex-wrap">
+            <div className="sm:max-w-[187px] w-full">
               <MyInput placeholder="AA1234567" title="Seriya va raqam" />
             </div>
-            <div className="mx-5">
-              <MyTitle title="Berilgan sanasi" />
-              <MyDataPricker />
-            </div>
-            <div className="">
-              <MyTitle title="Tugash sanasi" />
-              <MyDataPricker />
+            <div className="flex gap-2 items-center mt-5 w-full">
+              <div className="w-full">
+                <MyTitle title="Berilgan sanasi" />
+                <MyDataPricker />
+              </div>
+              <div className="w-full">
+                <MyTitle title="Tugash sanasi" />
+                <MyDataPricker />
+              </div>
             </div>
           </div>
           <MyInput
@@ -56,8 +58,8 @@ const UserInfoSection = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default UserInfoSection
+export default UserInfoSection;

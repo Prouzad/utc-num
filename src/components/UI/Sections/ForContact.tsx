@@ -4,10 +4,10 @@ import SecondTitle from "../SecondTitle";
 
 const ForContact = () => {
   return (
-    <>
+    <div className="md:mt-10 mt-5">
       <SecondTitle>Aloqa uchun ma’lumotlar</SecondTitle>
-      <div className="flex justify-between">
-        <div className="w-1/2 max-w-[467px]">
+      <div className="flex justify-between md:gap-10 sm:gap-5 sm:flex-row flex-col">
+        <div className="w-full mt-5">
           <MyTitle title="Telefon raqamingiz" />
           <PhoneInput
             specialLabel=""
@@ -22,12 +22,12 @@ const ForContact = () => {
             inputClass={`p-3  h-[42px] w-full  border border-[#D3E8F7] bg-[#FFF] focus:border-[#D3E8F7] focus:outline-none rounded`}
           />
         </div>
-        <div className="w-1/2 max-w-[467px]">
+        <div className="w-full mt-5">
           <MyTitle title="Kommentariya" />
           <textarea className="p-3 min-h-[155px] w-full border border-[#D3E8F7] bg-[#FFF] focus:border-[#D3E8F7] focus:outline-none rounded" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
