@@ -28,38 +28,39 @@ export default function Home() {
           <ForContact />
 
           <div className="md:mt-10: mt-5">
-            <SecondTitle>Xujjatlar</SecondTitle>
+            <SecondTitle>{t("documents")}</SecondTitle>
             <div className="grid md:grid-cols-2 grid-cols-1 mt-5 gap-5">
               <FileUpload
                 Icon={IconIdCard}
-                title="Passportingiz yoki ID kartangizni asosiy saxifasini yuklang"
-                placeholder="Fayl tanlanmagan"
+                title={t("passport_main_page")}
+                placeholder={t("file_not_selected")}
               />
               <FileUpload
                 Icon={IconSelfie}
-                title="Passportingiz bilan rasmga tushib yuboring (selfi)"
-                placeholder="Fayl tanlanmagan"
+                title={t("send_foto_selfie")}
+                placeholder={t("file_not_selected")}
               />
               <FileUpload
                 Icon={IconIdCard}
-                title="Passportingiz yoki ID kartangizni orqa saxifasini yuklang"
-                placeholder="Fayl tanlanmagan"
+                title={t("passport_back_page")}
+                placeholder={t("file_not_selected")}
               />
               <FileUpload
                 Icon={IconIdCard}
-                title="Passportingiz yoki ID kartangizni orqa saxifasini yuklang"
-                placeholder="Fayl tanlanmagan"
+                title={t("if_info_changed")}
+                placeholder={t("file_not_selected")}
               />
             </div>
           </div>
           <div className="mt-10">
             <Checkbox>
-              Shaxsiy ma`lumotlarimni qayta ishlanishiga{" "}
+              {t("agreement")}{" "}
               <Link
+                target="_blank"
                 className="text-[#228BD6]"
                 href="https://uztelecom.uz/uz/kompaniya-haqida-1/ommaviy-oferta-1"
               >
-                roziman
+                {t("i_agree")}
               </Link>
             </Checkbox>
           </div>
@@ -67,7 +68,7 @@ export default function Home() {
             disabled
             className="bg-[#228BD6] mt-5 text-white font-medium px-7 py-[10px] rounded-lg hover:bg-[#228BD6]/80 transition-all disabled:bg-[#C0C0C0]"
           >
-            Yuborish
+            {t("send")}
           </button>
         </div>
       </div>
